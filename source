@@ -1,0 +1,207 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Main = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local Instructions = Instance.new("TextButton")
+local IF = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local IC = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local IT = Instance.new("TextLabel")
+local NightsEdge = Instance.new("TextButton")
+local Open = Instance.new("TextButton")
+
+--Properties:
+
+Main.Name = "Main"
+Main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = Main
+MainFrame.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+MainFrame.BorderColor3 = Color3.fromRGB(255, 0, 0)
+MainFrame.BorderSizePixel = 3
+MainFrame.Position = UDim2.new(0.261315644, 0, 0.0601226985, 0)
+MainFrame.Size = UDim2.new(0, 723, 0, 604)
+
+Title.Name = "Title"
+Title.Parent = MainFrame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Size = UDim2.new(0, 722, 0, 112)
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "Non Fe Melee's"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+Close.Name = "Close"
+Close.Parent = MainFrame
+Close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.904498041, 0, -0.045880463, 0)
+Close.Rotation = 11.000
+Close.Size = UDim2.new(0, 90, 0, 79)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+Close.MouseButton1Click:Connect(function()
+	Close.Parent.Visible = false
+end)
+
+UICorner.CornerRadius = UDim.new(0, 20)
+UICorner.Parent = Close
+
+Instructions.Name = "Instructions"
+Instructions.Parent = MainFrame
+Instructions.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+Instructions.BorderSizePixel = 3
+Instructions.Position = UDim2.new(0.0428768992, 0, 0.197019875, 0)
+Instructions.Size = UDim2.new(0, 132, 0, 42)
+Instructions.Font = Enum.Font.SourceSansBold
+Instructions.Text = "INSTRUCTIONS!"
+Instructions.TextColor3 = Color3.fromRGB(0, 0, 0)
+Instructions.TextScaled = true
+Instructions.TextSize = 14.000
+Instructions.TextWrapped = true
+
+IF.Name = "IF"
+IF.Parent = MainFrame
+IF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+IF.Size = UDim2.new(0, 722, 0, 604)
+IF.Visible = false
+IF.ZIndex = 2
+
+UICorner_2.CornerRadius = UDim.new(0, 20)
+UICorner_2.Parent = IF
+
+IC.Name = "IC"
+IC.Parent = IF
+IC.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+IC.BorderSizePixel = 0
+IC.Position = UDim2.new(0.904498041, 0, -0.045880463, 0)
+IC.Rotation = 11.000
+IC.Size = UDim2.new(0, 90, 0, 79)
+IC.ZIndex = 3
+IC.Font = Enum.Font.SourceSans
+IC.Text = "X"
+IC.TextColor3 = Color3.fromRGB(255, 255, 255)
+IC.TextScaled = true
+IC.TextSize = 14.000
+IC.TextWrapped = true
+IC.MouseButton1Click:Connect(function()
+	IC.Parent.Visible = false
+end)
+
+UICorner_3.CornerRadius = UDim.new(0, 20)
+UICorner_3.Parent = IC
+
+IT.Name = "IT"
+IT.Parent = IF
+IT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+IT.BackgroundTransparency = 1.000
+IT.Size = UDim2.new(0, 721, 0, 595)
+IT.Font = Enum.Font.SourceSansBold
+IT.Text = "After you click on the Night's Edge button equip the dagger if you haven't already ;)"
+IT.TextColor3 = Color3.fromRGB(255, 255, 255)
+IT.TextScaled = true
+IT.TextSize = 14.000
+IT.TextStrokeTransparency = 0.000
+IT.TextWrapped = true
+
+NightsEdge.Name = "Night's Edge"
+NightsEdge.Parent = MainFrame
+NightsEdge.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+NightsEdge.BorderColor3 = Color3.fromRGB(255, 0, 0)
+NightsEdge.BorderSizePixel = 3
+NightsEdge.Position = UDim2.new(0.275242031, 0, 0.197019875, 0)
+NightsEdge.Size = UDim2.new(0, 132, 0, 42)
+NightsEdge.Font = Enum.Font.SourceSansBold
+NightsEdge.Text = "Night's Edge"
+NightsEdge.TextColor3 = Color3.fromRGB(255, 255, 255)
+NightsEdge.TextScaled = true
+NightsEdge.TextSize = 14.000
+NightsEdge.TextWrapped = true
+NightsEdge.MouseButton1Click:Connect(function()
+	game.ReplicatedStorage.Viewmodels.v_Dagger.Name = "noob"
+	game.ReplicatedStorage.Viewmodels["v_Night's Edge"].Name = "v_Dagger"
+end)
+
+Open.Name = "Open"
+Open.Parent = Main
+Open.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+Open.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Open.BorderSizePixel = 3
+Open.Position = UDim2.new(0.00448391354, 0, 0.52585423, 0)
+Open.Size = UDim2.new(0, 87, 0, 17)
+Open.Font = Enum.Font.SourceSansBold
+Open.Text = "OPEN!"
+Open.TextColor3 = Color3.fromRGB(255, 255, 255)
+Open.TextScaled = true
+Open.TextSize = 14.000
+Open.TextWrapped = true
+Open.MouseButton1Click:Connect(function()
+	Open.Parent.MainFrame.Visible = true
+end)
+
+-- Scripts:
+
+local function TQFIQT_fake_script() -- Instructions.LocalScript 
+	local script = Instance.new('LocalScript', Instructions)
+
+	while wait() do
+		for v1 = 0, 1, 0.002 do
+			script.Parent.TextColor3 = Color3.fromHSV(v1, 1, 1);
+			wait();
+		end;
+	end;
+	
+	
+end
+coroutine.wrap(TQFIQT_fake_script)()
+local function IUCRT_fake_script() -- Instructions.LocalScript 
+	local script = Instance.new('LocalScript', Instructions)
+
+	while wait() do
+		for v1 = 0, 1, 0.002 do
+			script.Parent.BorderColor3 = Color3.fromHSV(v1, 1, 1);
+			wait();
+		end;
+	end;
+	
+	
+end
+coroutine.wrap(IUCRT_fake_script)()
+local function KEBX_fake_script() -- IF.LocalScript 
+	local script = Instance.new('LocalScript', IF)
+
+	while wait() do
+		for v1 = 0, 1, 0.002 do
+			script.Parent.BackgroundColor3 = Color3.fromHSV(v1, 1, 1);
+			wait();
+		end;
+	end;
+	
+	
+end
+coroutine.wrap(KEBX_fake_script)()
+local function XPQG_fake_script() -- MainFrame.LocalScript 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	local   frame = script.Parent -- Take out {}s, and put name of frame
+	frame.Draggable = true
+	frame.Active = true
+	frame.Selectable = true
+end
+coroutine.wrap(XPQG_fake_script)()
